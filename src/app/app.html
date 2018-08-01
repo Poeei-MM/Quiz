@@ -5,7 +5,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+ <ion-content class="card-background-page">
+	<div class="menu-header">
+      <div class="card-title">National League for Democracy<br>(NLD)</div>
+    </div>
+    
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}

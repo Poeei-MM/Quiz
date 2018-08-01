@@ -1,0 +1,145 @@
+page-concert-card {
+	.score {
+		padding: 10px;
+	}
+	
+    $header-color: #fdf000;
+    $content-color: #ec1b23;
+    $clip-color: #fdfdfd;
+	
+	
+    .bar-buttons,
+    .toolbar-title, button {
+        color: #fff !important;
+    }
+
+    .toolbar-background {
+        background: transparentize(#ec1b23 ,0.1) !important;
+    }
+
+    .scroll-content {
+        background: $clip-color;
+    }
+
+    ion-card {
+        margin: 0 auto !important;
+        max-width: 500px;
+        background: #fdf000 !important;
+        box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .the-header {
+        position: relative;
+        height: 30vh;
+
+        .header-text {
+            position: absolute;
+            text-align: center;
+            z-index: 2;
+            top: 40px;
+            left: 15px;
+        }
+
+        .header-text h1 {
+            font-weight: bold;
+        }
+
+        .header-text p {
+            padding-left: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .background {
+            height: 30vh;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 160px, 0 115%);
+        }
+
+        button {
+            position: absolute;
+            bottom: -30px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            background: $content-color;
+            border: 3px solid $header-color;
+            z-index: 2;
+ 
+            ion-icon {
+                font-size: 1.8rem;
+                color: #fff;
+            }
+            &.activated {
+                background: $content-color;
+                
+            }
+            &.activated ion-icon{
+                transition: .1s linear;
+                color: $header-color;
+            }
+            
+        }
+    }
+
+    .the-content {
+        padding-top: 40px !important;
+        background: $content-color;
+        clip-path: polygon(0 24px, 100% -20px, 100% 100%, 0 101%);
+        min-height: 60vh;
+		
+        h2{
+            color: white;
+        }
+
+       
+        
+        .answers {
+			min-height: 30vh;
+			background-image: url('../assets/images/NLD.png');
+			background-size: contain;
+			background-repeat: round;
+			ion-list {
+				ion-item {
+					border-radius: 10px;
+					margin: 5px auto;
+					background-color: $header-color;
+					font-size: 1.4rem;
+					font-weight: bold;
+					opacity: 0.7;
+				}
+			}
+	
+		}
+		
+		button.btnPrev , button.btnNext {
+			background-color: $header-color;
+			
+        }
+    }
+   
+}
+.rightans {
+	top: -50px;
+	border-radius: 20px;
+	
+	div {
+		width: 200px;
+		height: auto;
+		font-family: Changa one;
+		font-weight: bold;
+		background-color: rgba(13, 229, 46, 0.5);
+		}
+}
+.wrongans {
+	top: -50px;
+	border-radius: 20px;
+	
+	div {
+		width: 200px;
+		height: auto;
+		font-family: Changa one;
+		font-weight: bold;
+		background-color: rgba(247, 2, 2, 0.5);
+		}
+}

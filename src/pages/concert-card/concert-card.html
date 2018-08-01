@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar transparent>
+	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>IT Quiz</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="baseball"></ion-icon>
+        <div class="score">{{myscore}}</div>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <section margin-top margin-bottom>
+    <ion-slides #slides effect="cube" pager="true" paginationType="fraction">
+      <ion-slide *ngFor="let concert of concerts">
+        <ion-card>
+          <div class="the-header">
+            <div class="header-text">
+              <h1>{{concert.question}}</h1>
+            </div>
+            <div class="background" [style.background]="concert.color">
+            </div>
+            <button ion-fab icon-end>
+		      <span>Hint</span>
+              <ion-icon name="bulb"></ion-icon>
+            </button>
+           
+
+            
+          </div>
+          <div class="the-content" padding>
+            <h2>Choose Only 1 Answer!</h2>
+            <div class="answers" padding>
+
+			<ion-list radio-group>
+ 
+                <ion-item>
+					
+                    <ion-label>A. {{concert.answer.rans}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.rans,concert.id)"></ion-radio>
+ 
+                </ion-item>
+ 
+                <ion-item>
+ 
+                    <ion-label>B. {{concert.answer.fans1}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.fans1,concert.id)"></ion-radio>
+ 
+                </ion-item>
+ 
+                <ion-item>
+ 
+                    <ion-label>C. {{concert.answer.fans2}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.fans2,concert.id)"></ion-radio>
+ 
+                </ion-item>
+                
+                <ion-item>
+ 
+                    <ion-label>D. {{concert.answer.fans3}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.fans3,concert.id)"></ion-radio>
+ 
+                </ion-item>
+ 
+            </ion-list>
+            
+           
+			</div>
+
+		   <button type="submit" float-right ion-button *ngIf="!(index == true)" class="btnNext" (click)="next()">Next</button>
+		   <button type="submit" float-right ion-button *ngIf="index == true" class="btnNext" (click)="next()">Finish</button>
+          </div>
+           
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </section>
+</ion-content>

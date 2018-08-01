@@ -14,3 +14,29 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.card-background-page {
+	
+ 
+
+
+  .menu-header {
+    padding: 5px 15px;
+    background-image: url('../assets/images/NLD.png');
+    background-size: cover;
+    height: 30%;
+    color: white;
+    
+    
+    .card-title {
+		position: absolute;
+		top:3%;
+		font-size: 1.5em;
+		text-align: right;
+		width: 90%;
+		font-weight: bold;
+		color: #000;
+		float: right;
+	  }
+  }
+ }

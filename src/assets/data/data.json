@@ -1,0 +1,59 @@
+[
+ 
+        {
+            "question": "USB stands for?",
+            "id": 0,
+            "answer": 
+            {
+				"fans3": "University Serial Bus",
+				"fans1": "Universal Several Bus",
+				"fans2": "Universal Serial Buses",
+				"rans": "Universal Serial Bus"
+			}
+			,
+            "hint": "Universal Serial Bus",
+            "color": "#fdfdfd"
+        },
+        {
+            "question": "Which of the following is an example of non volatile memory?",
+            "id": 1,
+            "answer": 
+            {				
+				"fans1": "VLSI",
+				"fans2": "RAM",
+				"fans3": "LSI",
+			    "rans": "ROM"
+			}
+			,
+            "hint": "ROM",
+            "color": "#fdfdfd"
+        },
+        {
+            "question": "Which of the following is NOT operating system?",
+            "id": 2,
+            "answer": 
+            {				
+				"fans1": "Window NT",
+				"fans2": "Dos",
+				"rans": "Java",
+			    "fans3": "Unix"
+			}
+			,
+            "hint": "Java",
+            "color": "#fdfdfd"
+        },
+        {
+            "question": "One byte is equivalent to?",
+            "id": 3,
+            "answer": 
+            {				
+				"fans1": "4 bits",
+				"fans2": "32 bits",
+				"rans": "8 bits",
+			    "fans3": "12 bits"
+			}
+			,
+            "hint": "8 bits",
+            "color": "#fdfdfd"
+        }
+]
