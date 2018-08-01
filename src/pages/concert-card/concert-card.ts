@@ -15,7 +15,7 @@ export class ConcertCardPage {
   @ViewChild('slides') slides: Slides;
   
   concerts	: any[];
-  answers : any[];
+  answer : any;
   myscore : number = 0;
   index : any;
   sindex : any;
@@ -23,10 +23,17 @@ export class ConcertCardPage {
 	this.rest.getData().subscribe(data => {
       console.log(data);
       this.concerts = data;
+      this.slides.lockSwipes(true);
     });
+    
+    
   }
   
-  selectAnswer(ans, id) {
+  selectAnswer(ans, id = 0) {
+  this.answer = ans;
+  if(ans) {
+	this.slides.lockSwipes(false);
+	this.slides.lockSwipeToPrev(true);
 	if(ans === this.concerts[id].answer.rans) {
 		this.myscore += 1;
 		
@@ -50,22 +57,26 @@ export class ConcertCardPage {
 
     toast.present(toast);
 	}
+	}
+	
   }
   
 
-  next() {
-	this.slides.lockSwipeToPrev(true);
-    this.sindex = this.slides.isBeginning();
-    
-	this.index = this.slides.isEnd();
+  next(ans) {
 	
-	if(!this.index) {
-		this.slides.slideNext();
-    }
-    else
-    {
-		alert('Finish! Your score is ' + this.myscore);
-    }
-    
+	//this.sindex = this.slides.isBeginning();
+	this.index = this.slides.isEnd();
+	if(ans) {
+		if(!this.index) {
+			
+			this.slides.slideNext();
+			
+		}
+		else
+		{
+			alert('Finish! Your score is ' + this.myscore);
+		}
+	}
+	this.answer = null;
   }
 }
