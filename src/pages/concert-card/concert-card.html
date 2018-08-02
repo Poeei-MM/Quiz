@@ -16,13 +16,14 @@
 <ion-content fullscreen>
   <section margin-top margin-bottom>
     <ion-slides #slides effect="coverflow" pager="true" paginationType="fraction">
-      <ion-slide *ngFor="let concert of concerts">
+      <ion-slide *ngFor="let concert of concertsrd">
         <ion-card>
           <div class="the-header">
             <div class="header-text">
-              <h1>{{concert.question}}</h1>
+              <h3>{{concert.question}}</h3>
             </div>
             <div class="background" [style.background]="concert.color">
+				{{concert.id}}
             </div>
             <button ion-fab icon-end>
 		      <span>Hint</span>
@@ -40,32 +41,25 @@
  
                 <ion-item>
 					
-                    <ion-label>A. {{concert.answer.rans}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.rans,concert.id)"></ion-radio>
+                    <ion-label>က။ {{concert.answer.rans}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.rans,concert)"></ion-radio>
  
                 </ion-item>
  
                 <ion-item>
  
-                    <ion-label>B. {{concert.answer.fans1}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.fans1,concert.id)"></ion-radio>
+                    <ion-label>ခ။ {{concert.answer.fans1}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.fans1,concert)"></ion-radio>
  
                 </ion-item>
  
                 <ion-item>
  
-                    <ion-label>C. {{concert.answer.fans2}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.fans2,concert.id)"></ion-radio>
+                    <ion-label>ဂ။ {{concert.answer.fans2}}</ion-label>
+                    <ion-radio (click)="selectAnswer(concert.answer.fans2,concert)"></ion-radio>
  
                 </ion-item>
                 
-                <ion-item>
- 
-                    <ion-label>D. {{concert.answer.fans3}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.fans3,concert.id)"></ion-radio>
- 
-                </ion-item>
- 
             </ion-list>
             
            

@@ -1,45 +1,42 @@
 [
  
         {
-            "question": "USB stands for?",
+            "question": "ျပည္ေထာင္စု ျငိမ္းခ်မ္းေရးညီလာခံ ၂၁ ရာစုပင္လံုက်င္းပခဲ့ေသာ အစည္းအေဝး အျကိမ္ေပါင္းမွာ...",
             "id": 0,
             "answer": 
             {
-				"fans3": "University Serial Bus",
-				"fans1": "Universal Several Bus",
-				"fans2": "Universal Serial Buses",
-				"rans": "Universal Serial Bus"
+				"fans1": "၂",
+				"fans2": "၁",
+				"rans": "၃"
 			}
 			,
-            "hint": "Universal Serial Bus",
+            "hint": "၃",
             "color": "#fdfdfd"
         },
         {
-            "question": "Which of the following is an example of non volatile memory?",
+            "question": "NCA (Nationwide Ceasefire Agreement-တစ္နိုင္ငံလံုးပစ္ခတ္တိုက္ခိုက္မွု ရပ္စဲေရး သေဘာတူစာခ်ုပ္) လက္မွတ္ေရးထ်ုးထားေသာ အဖြဲ့စည္းေပါင္း...",
             "id": 1,
             "answer": 
             {				
-				"fans1": "VLSI",
-				"fans2": "RAM",
-				"fans3": "LSI",
-			    "rans": "ROM"
+				"fans1": "၁၂",
+				"fans2": "၈",
+			    "rans": "၁၀"
 			}
 			,
-            "hint": "ROM",
+            "hint": "၁၀",
             "color": "#fdfdfd"
         },
         {
-            "question": "Which of the following is NOT operating system?",
+            "question": "NCA (တစ္နိုင္ငံလံုးပစ္ခတ္တိုက္ခိုက္မွု ရပ္စဲေရး သေဘာတူစာခ်ုပ္)ကို ....... တြင္ လက္မွတ္ေရးထိုးသည္။",
             "id": 2,
             "answer": 
             {				
-				"fans1": "Window NT",
-				"fans2": "Dos",
-				"rans": "Java",
-			    "fans3": "Unix"
+				"fans1": "၂၀၁၅၊ ေဖေဖာ္ဝါရီလ ၁၂ရက္",
+				"fans2": "၂၀၁၆၊ ေဖေဖာ္ဝါရီလ ၂၃ရက္",
+				"rans": "၂၀၁၅၊ ေဖေဖာ္ဝါရီလ ၁၅ရက္"
 			}
 			,
-            "hint": "Java",
+            "hint": "၂၀၁၅၊ ေဖေဖာ္ဝါရီလ ၁၅ရက္",
             "color": "#fdfdfd"
         },
         {
