@@ -92,9 +92,8 @@ export class ConcertCardPage {
 	if(ans) {
 		
 		if(!this.index) {
-			
-			
 			this.slides.slideNext();
+			this.slides.lockSwipes(true);
 		}
 		else
 		{
@@ -108,6 +107,6 @@ export class ConcertCardPage {
 		}
 	}
 	this.answer = null;
-	this.slides.lockSwipes(true);
+	
   }
 }
