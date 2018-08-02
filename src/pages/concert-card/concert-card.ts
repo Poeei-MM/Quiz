@@ -16,6 +16,8 @@ export class ConcertCardPage {
   
   concerts	: any[];
   concertsrd : any[];
+  concertans : any[];
+  concertansrd : any[];
   answer : any;
   myscore : number = 0;
   index : any;
@@ -29,13 +31,27 @@ export class ConcertCardPage {
     this.rest.getData().subscribe(data => {
       console.log(data);
       this.concerts = data;
-      console.log(this.concerts);
+      console.log(this.concerts.length);
 		
 		this.concertsrd = [];
+		
 		while (this.concerts.length) {
-		let data = Math.round(Math.random() * (this.concerts.length - 1));
-		this.concertsrd.push(this.concerts[data]);
-		this.concerts.splice(data, 1);
+			let data = Math.round(Math.random() * (this.concerts.length - 1));
+			let ques = this.concerts[data];
+			this.concertans = ques.answer;
+			console.log(this.concertans.length);
+			this.concertansrd = [];
+			while (this.concertans.length) {
+				let dataans = Math.round(Math.random() * (this.concertans.length - 1));
+				this.concertansrd.push(this.concertans[dataans]);
+				this.concertans.splice(dataans, 1);
+			}
+			
+			this.concerts[data].answer = this.concertansrd;
+			console.log(this.concertansrd);
+			this.concertsrd.push(this.concerts[data]);
+			this.concerts.splice(data, 1);
+		
 		}
 	    console.log(this.concertsrd);
 	    

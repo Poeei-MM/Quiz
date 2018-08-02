@@ -23,7 +23,7 @@
               <h3>{{concert.question}}</h3>
             </div>
             <div class="background" [style.background]="concert.color">
-				{{concert.id}}
+			
             </div>
             <button ion-fab icon-end>
 		      <span>Hint</span>
@@ -37,26 +37,12 @@
             <h2>Choose Only 1 Answer!</h2>
             <div class="answers" padding>
 
-			<ion-list radio-group>
+			<ion-list radio-group *ngFor="let ans of concert.answer">
  
                 <ion-item>
 					
-                    <ion-label>က။ {{concert.answer.rans}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.rans,concert)"></ion-radio>
- 
-                </ion-item>
- 
-                <ion-item>
- 
-                    <ion-label>ခ။ {{concert.answer.fans1}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.fans1,concert)"></ion-radio>
- 
-                </ion-item>
- 
-                <ion-item>
- 
-                    <ion-label>ဂ။ {{concert.answer.fans2}}</ion-label>
-                    <ion-radio (click)="selectAnswer(concert.answer.fans2,concert)"></ion-radio>
+                    <ion-label>{{ans}}</ion-label>
+                    <ion-radio (click)="selectAnswer(ans,concert)"></ion-radio>
  
                 </ion-item>
                 
