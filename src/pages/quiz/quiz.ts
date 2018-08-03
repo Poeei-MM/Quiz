@@ -67,25 +67,18 @@ export class QuizPage {
   }
   
   go(ans, concert) {
+	  
+	  
 	  console.log(this.answer);
-	  this.answer = ans;
-	  console.log(this.answer);
-		if(!this.answer){
+		if(!ans){
 			alert("Choose 1 answer!");
-			this.ionViewDidLoad();
+			//this.ionViewDidLoad();
 		}
 		else {
-			
+			this.answer = ans;
+			console.log(this.answer);
 			if(this.answer === concert.hint) {
 				this.myscore += 1;
-				let toast = this.toastCtrl.create({
-					  message: 'Right!',
-					  duration: 500,
-					  position: 'middle',
-					  cssClass: 'rightans'
-					});
-
-			toast.present(toast);
 			}
 			this.next();
 		}
