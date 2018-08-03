@@ -21,7 +21,7 @@ export class QuizPage {
   choiceanswer : any;
   answer : any;
   myscore : number = 0;
-  index : any;
+  indexslide : any;
   sindex : any;
   constructor( public navCtrl: NavController,
 			   public http: Http,
@@ -66,35 +66,36 @@ export class QuizPage {
     
   }
   
-  go(ans, concert) {
-	  
+  go(concert) {
+	  this.answer = null;
 	  
 	  console.log(this.answer);
-		if(!ans){
+		if(!this.choiceanswer){
 			alert("Choose 1 answer!");
 			//this.ionViewDidLoad();
 		}
 		else {
-			this.answer = ans;
+			this.answer = this.choiceanswer;
 			console.log(this.answer);
 			if(this.answer === concert.hint) {
 				this.myscore += 1;
 			}
-			this.next();
+			this.next(this.answer);
 		}
 	
   }
 
-  next() {
+  next(ans) {
 	//this.sindex = this.slides.isBeginning();
-	this.index = this.slides.isEnd();
+	this.indexslide = this.slides.isEnd();
 	
-	if(this.answer) {
+	if(ans) {
 		this.slides.lockSwipeToNext(false);
-			if(!this.index) {
+			if(!this.indexslide) {
 				
 				this.slides.slideNext();
 				this.slides.lockSwipes(true);
+				
 			}
 			else
 			{
@@ -108,7 +109,7 @@ export class QuizPage {
 			}
 	
 	}
+	this.choiceanswer = null;
 	
-	this.answer = null;
   }
 }

@@ -30,11 +30,11 @@
             <h2>Choose Only 1 Answer!</h2>
             <div class="answers" padding>
 
-			<ion-list radio-group *ngFor="let ans of concert.answer" [(ngModel)]="choiceanswer">
+			<ion-list radio-group *ngFor="let ans of concert.answer;" [(ngModel)]="choiceanswer">
  
                 <ion-item>
 					
-                    <ion-label>{{ans}}</ion-label>
+                    <ion-label>အဖြေ  = {{ans}}</ion-label>
                     <ion-radio  [value]="ans"></ion-radio>
  
                 </ion-item>
@@ -44,8 +44,8 @@
            
 			</div>
 
-		   <button type="submit" float-right ion-button *ngIf="!(index == true)" class="btnNext" (click)="go(choiceanswer, concert)">Next</button>
-		   <button type="submit" float-right ion-button *ngIf="index == true" class="btnNext" (click)="next()">Finish</button>
+		   <button type="submit" [disabled]="!choiceanswer" float-right ion-button *ngIf="!(indexslide == true)" class="btnNext" (click)="go(concert)">Next</button>
+		   <button type="submit" float-right ion-button *ngIf="indexslide == true" class="btnNext" (click)="next()">Finish</button>
           </div>
            
         </ion-card>
