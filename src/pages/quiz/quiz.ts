@@ -78,6 +78,14 @@ export class QuizPage {
 			
 			if(this.answer === concert.hint) {
 				this.myscore += 1;
+				let toast = this.toastCtrl.create({
+					  message: 'Right!',
+					  duration: 500,
+					  position: 'middle',
+					  cssClass: 'rightans'
+					});
+
+			toast.present(toast);
 			}
 			this.next();
 		}
