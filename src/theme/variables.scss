@@ -109,7 +109,7 @@ padding:10px;
 }
 
 @font-face {
-font-family: 'NotoSansMyanmar-Regular';
+font-family: 'NotoSansMyanmar-Regular' !important;
 src: url('../assets/fonts/NotoSansMyanmar-Regular.eot');
 src: url('../assets/fonts/NotoSansMyanmar-Regular.woff') format('woff'), url('../assets/fonts/NotoSansMyanmar-Regular.ttf') format('truetype'), url('../assets/fonts/NotoSansMyanmar-Regular.svg') format('svg');
 font-weight: normal;
@@ -117,7 +117,7 @@ font-style: normal;
 }
 .myanmar
 {
-font-family:'NotoSansMyanmar-Regular',Sans-Serif;
+font-family:'NotoSansMyanmar-Regular',Sans-Serif !important;
 width:800px;
 margin:10px auto;
 text-align:left;
@@ -126,5 +126,5 @@ text-align:left;
 
 p,h1,h2,h3,a,div
 {
-font-family:'Zawgyi-One',Sans-Serif;
+font-family:'Zawgyi-One',Sans-Serif !important;
 }
