@@ -18,6 +18,7 @@ export class ConcertCardPage {
   concertsrd : any[];
   concertans : any[];
   concertansrd : any[];
+  choiceanswer : any;
   answer : any;
   myscore : number = 0;
   index : any;
@@ -64,13 +65,15 @@ export class ConcertCardPage {
     console.log('ionViewDidLoad RandomPage');
     
   }
-  
-  selectAnswer(ans, concert) {
+
+  next(ans, concert) {
+ 
+	//this.sindex = this.slides.isBeginning();
+	this.index = this.slides.isEnd();
 	
-	this.answer = ans;
 	if(ans) {
 		this.slides.lockSwipes(false);
-		this.slides.lockSwipeToPrev(true);
+		
 		if(ans === concert.hint) {
 			
 			
@@ -96,16 +99,6 @@ export class ConcertCardPage {
 
 		toast.present(toast);
 		}
-	}
-	
-  }
-  
-
-  next(ans) {
-	//this.sindex = this.slides.isBeginning();
-	this.index = this.slides.isEnd();
-	console.log(ans);
-	if(ans) {
 		
 		if(!this.index) {
 			this.slides.slideNext();
