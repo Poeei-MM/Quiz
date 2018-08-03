@@ -4,7 +4,7 @@ page-quiz {
 	}
 	
     $header-color: #fdf000;
-    $content-color: #ec1b23;
+    $content-color: #34aff2;
     $clip-color: #fdfdfd;
 	
 	
@@ -14,7 +14,7 @@ page-quiz {
     }
 
     .toolbar-background {
-        background: transparentize(#ec1b23 ,0.1) !important;
+        background: transparentize(#34aff2 ,0.1) !important;
     }
 
     .scroll-content {
@@ -36,13 +36,13 @@ page-quiz {
             position: absolute;
             text-align: center;
             z-index: 2;
-            top: 40px;
+            top: 10px;
             left: 15px;
         }
 
         .header-text h3 {
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .background {
@@ -60,19 +60,10 @@ page-quiz {
             background: $content-color;
             border: 3px solid $header-color;
             z-index: 2;
- 
-            ion-icon {
-                font-size: 1.8rem;
-                color: #fff;
-            }
-            &.activated {
-                background: $content-color;
-                
-            }
-            &.activated ion-icon{
-                transition: .1s linear;
-                color: $header-color;
-            }
+			background-image: url('../assets/images/nld.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			
             
         }
     }

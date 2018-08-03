@@ -21,22 +21,25 @@
 
 
   .menu-header {
-    padding: 5px 15px;
-    background-image: url('../assets/images/NLD.png');
-    background-size: cover;
-    height: 30%;
+    padding: 10px 15px;
+    background-image: url('../assets/images/nld.jpg');
+    background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.9;
+    height: 45%;
+    text-align: center;
     color: white;
     
     
     .card-title {
 		position: absolute;
-		top:3%;
+		top: 0;
 		font-size: 1.5em;
-		text-align: right;
+		text-align: center;
 		width: 90%;
 		font-weight: bold;
 		color: #000;
-		float: right;
+
 	  }
   }
  }

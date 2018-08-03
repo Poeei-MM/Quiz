@@ -78,26 +78,7 @@ export class QuizPage {
 			
 			
 			this.myscore += 1;
-			
-		let toast = this.toastCtrl.create({
-		  message: 'Right!',
-		  duration: 500,
-		  position: 'middle',
-		  cssClass: 'rightans'
-		});
-
-		toast.present(toast);
 		
-		}
-		else {
-		let toast = this.toastCtrl.create({
-		  message: 'Wrong!',
-		  duration: 500,
-		  position: 'middle',
-		  cssClass: 'wrongans'
-		});
-
-		toast.present(toast);
 		}
 		
 		if(!this.index) {

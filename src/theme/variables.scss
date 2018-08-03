@@ -87,3 +87,44 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+/* Add your custom styles here... */
+
+@font-face {
+font-family: 'Zawgyi-One' !important;
+src: url('../assets/fonts/Zawgyi-One.eot');
+src: url('../assets/fonts/Zawgyi-One.woff') format('woff'), url('../assets/fonts/Zawgyi-One.ttf') format('truetype'), url('../assets/fonts/Zawgyi-One.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+.zawgyi
+{
+font-family:'Zawgyi-One',Sans-Serif;
+
+margin:10px auto;
+text-align:left;
+
+padding:10px;
+}
+
+@font-face {
+font-family: 'NotoSansMyanmar-Regular';
+src: url('../assets/fonts/NotoSansMyanmar-Regular.eot');
+src: url('../assets/fonts/NotoSansMyanmar-Regular.woff') format('woff'), url('../assets/fonts/NotoSansMyanmar-Regular.ttf') format('truetype'), url('../assets/fonts/NotoSansMyanmar-Regular.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+.myanmar
+{
+font-family:'NotoSansMyanmar-Regular',Sans-Serif;
+width:800px;
+margin:10px auto;
+text-align:left;
+
+}
+
+p,h1,h2,h3,a,div
+{
+font-family:'Zawgyi-One',Sans-Serif;
+}
