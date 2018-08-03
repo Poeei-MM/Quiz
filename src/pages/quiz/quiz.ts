@@ -65,38 +65,49 @@ export class QuizPage {
     console.log('ionViewDidLoad RandomPage');
     
   }
+  
+  go(ans, concert) {
+	  console.log(this.answer);
+	  this.answer = ans;
+	  console.log(this.answer);
+		if(!this.answer){
+			alert("Choose 1 answer!");
+			this.ionViewDidLoad();
+		}
+		else {
+			
+			if(this.answer === concert.hint) {
+				this.myscore += 1;
+			}
+			this.next();
+		}
+	
+  }
 
-  next(ans, concert) {
- 
+  next() {
 	//this.sindex = this.slides.isBeginning();
 	this.index = this.slides.isEnd();
 	
-	if(ans) {
-		this.slides.lockSwipes(false);
-		
-		if(ans === concert.hint) {
-			
-			
-			this.myscore += 1;
-		
-		}
-		
-		if(!this.index) {
-			this.slides.slideNext();
-			this.slides.lockSwipes(true);
-		}
-		else
-		{
-			const alert = this.alertCtrl.create({
-			  title: 'Your Score is',
-			  subTitle: '<h2><strong>' + this.myscore + '</strong></h2>',
-			  message: 'Thank you for playing with us!',
-			  buttons: ['OK']
-			});
-			alert.present();
-		}
-	}
-	this.answer = null;
+	if(this.answer) {
+		this.slides.lockSwipeToNext(false);
+			if(!this.index) {
+				
+				this.slides.slideNext();
+				this.slides.lockSwipes(true);
+			}
+			else
+			{
+				const alert = this.alertCtrl.create({
+				  title: 'Your Score is',
+				  subTitle: '<h2><strong>' + this.myscore + '</strong></h2>',
+				  message: 'Thank you for playing with us!',
+				  buttons: ['OK']
+				});
+				alert.present();
+			}
 	
+	}
+	
+	this.answer = null;
   }
 }
