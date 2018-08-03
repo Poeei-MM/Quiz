@@ -7,10 +7,10 @@ import { RestProvider } from '../../providers/rest/rest';
 
 @IonicPage()
 @Component({
-  selector: 'page-concert-card',
-  templateUrl: 'concert-card.html',
+  selector: 'page-quiz',
+  templateUrl: 'quiz.html',
 })
-export class ConcertCardPage {
+export class QuizPage {
   
   @ViewChild('slides') slides: Slides;
   
