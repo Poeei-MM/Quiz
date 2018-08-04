@@ -13,7 +13,7 @@ export class ListPage {
   myscore : any;
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite ) {
-	this.score = this.navParams.get('score');
+	this.myscore = this.navParams.get('score');
     alert(this.myscore);
   }
   ionViewDidLoad() {
