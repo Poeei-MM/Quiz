@@ -113,7 +113,6 @@ export class QuizPage {
 					}]
 				});
 				alert.present();
-				this.myscore = 0;
 			}
 	
 	}
