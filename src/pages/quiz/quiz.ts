@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, IonicPage, ToastController, Slides, AlertController } from 'ionic-angular';
+import { NavController, IonicPage, ToastController, Slides, AlertController, ViewController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { RestProvider } from '../../providers/rest/rest';
 
@@ -27,7 +27,8 @@ export class QuizPage {
 			   public http: Http,
 			   public rest: RestProvider, 
 			   public toastCtrl: ToastController,
-			   public alertCtrl: AlertController ) { 
+			   public alertCtrl: AlertController,
+			   public viewCtrl: ViewController ) { 
 	
     this.rest.getData().subscribe(data => {
       console.log(data);
@@ -103,7 +104,12 @@ export class QuizPage {
 				  title: 'Your Score is',
 				  subTitle: '<h2><strong>' + this.myscore + '</strong></h2>',
 				  message: 'Thank you for playing with us!',
-				  buttons: ['OK']
+				  buttons: [{
+					  text: 'Ok',
+					  handler: () =>{
+						this.navCtrl.setRoot('QuizPage');
+					  }
+					}]
 				});
 				alert.present();
 			}

@@ -8,37 +8,48 @@
 </ion-header>
 
 <ion-content fullscreen>
+
   <section margin-top margin-bottom>
     <ion-slides #slides effect="coverflow" pager="true" paginationType="fraction">
       <ion-slide *ngFor="let concert of concertsrd">
         <ion-card>
           <div class="the-header">
+			
             <div class="header-text">
+			  
               <h3>{{concert.question}}</h3>
             </div>
+            
             <div class="background" [style.background]="concert.color">
 			
             </div>
-            <button ion-fab>
-              
-            </button>
-           
+			<div>
+				<ion-row no-padding>
+				  <ion-col>
+					  <button class="bt1" ion-fab></button>
+					</ion-col>
+					<ion-col>
+						<button class="bt2" ion-fab></button>
+					</ion-col>
+					<ion-col>
+						<button class="bt3" ion-fab></button>
+					</ion-col>
+				</ion-row>
+			</div>
 
-            
           </div>
           <div class="the-content" padding>
-            <h2>Choose Only 1 Answer!</h2>
             <div class="answers" padding>
 
 			<ion-list radio-group *ngFor="let ans of concert.answer;" [(ngModel)]="choiceanswer">
  
                 <ion-item>
 					
-                    <ion-label>အဖြေ  = {{ans}}</ion-label>
+                    <ion-label>အေျဖ= {{ans}}</ion-label>
                     <ion-radio  [value]="ans"></ion-radio>
  
                 </ion-item>
-                
+               
             </ion-list>
             
            
@@ -53,3 +64,9 @@
     </ion-slides>
   </section>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div><span>MCIA (Mandalay Computer Industry Association)</span><br>
+              မွ လႉဒါန္းပါသည္။</div>
+  </ion-toolbar>
+</ion-footer>

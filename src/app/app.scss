@@ -15,14 +15,12 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.card-background-page {
-	
- 
 
+.card-background-page {
 
   .menu-header {
     padding: 10px 15px;
-    background-image: url('../assets/images/nld.jpg');
+    background-image: url('../assets/images/nld1.jpg');
     background-size: contain;
 	background-repeat: no-repeat;
 	opacity: 0.9;
@@ -33,7 +31,7 @@
     
     .card-title {
 		position: absolute;
-		top: 0;
+		top: 5px;
 		font-size: 1.5em;
 		text-align: center;
 		width: 90%;
@@ -42,4 +40,21 @@
 
 	  }
   }
- }
+  
+  ion-list {
+	button {
+		background-color: #34aff2;
+		border-radius: 20px;
+		 @media screen and (max-width: 480px) {
+			 margin: 5px auto;
+			 box-shadow: 2px 1px 2px 2px #888888;
+		}
+		@media screen and (min-width: 500px) {
+			 margin: 8px auto;
+			 box-shadow: 3px 1px 3px 3px #888888;
+		}
+	
+	}
+  }
+}
+

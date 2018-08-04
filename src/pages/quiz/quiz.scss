@@ -6,7 +6,8 @@ page-quiz {
     $header-color: #fdf000;
     $content-color: #34aff2;
     $clip-color: #fdfdfd;
-	
+	$break-small: 480px;
+    $break-large: 500px;
 	
     .bar-buttons,
     .toolbar-title, button {
@@ -30,28 +31,35 @@ page-quiz {
 
     .the-header {
         position: relative;
-        height: 30vh;
+        height: 32vh;
 
         .header-text {
             position: absolute;
             text-align: center;
             z-index: 2;
             top: 10px;
-            padding: 5px;
+            padding: 20px;
         }
 
         .header-text h3 {
             font-weight: bold;
-            font-size: 1.6rem;
+           
+            @media screen and (max-width: $break-small) {
+				 font-size: 1.6rem;
+			}
+			@media screen and (min-width: $break-large) {
+				 font-size: 2.6rem;
+			}
         }
 
         .background {
             height: 30vh;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 160px, 0 115%);
+            
+            
         }
 
-        button {
+        button.bt1 {
             position: absolute;
             bottom: -30px;
             margin: 0 auto;
@@ -66,13 +74,43 @@ page-quiz {
 			
             
         }
+        button.bt2 {
+            position: absolute;
+            bottom: -30px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            background: $content-color;
+            border: 3px solid $header-color;
+            z-index: 2;
+			background-image: url('../assets/images/nld1.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			
+            
+        }
+        button.bt3 {
+            position: absolute;
+            bottom: -30px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            background: $content-color;
+            border: 3px solid $header-color;
+            z-index: 2;
+			background-image: url('../assets/images/logo3.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			
+            
+        }
     }
 
     .the-content {
         padding-top: 40px !important;
         background: $content-color;
-        clip-path: polygon(0 24px, 100% -20px, 100% 100%, 0 101%);
-        min-height: 60vh;
+       
+        min-height: 50vh;
 		
         h2{
             color: white;
@@ -88,12 +126,20 @@ page-quiz {
 			ion-list {
 				ion-item {
 					border-radius: 10px;
-					margin: 5px;
+					
 					background-color: $header-color;
-					font-size: 1.2rem;
 					font-weight: bold;
 					opacity: 0.7;
-					height: 50px;;
+					@media screen and (max-width: $break-small) {
+						 font-size: 0.9rem;
+						 height: 30px;
+						 margin: 5px;
+					}
+					@media screen and (min-width: $break-large) {
+						 font-size: 2.5rem;
+						 height: auto;
+						 margin: 10px;
+					}
 				}
 			}
 	
@@ -101,10 +147,32 @@ page-quiz {
 		
 		button.btnPrev , button.btnNext {
 			background-color: $header-color;
-			
+			@media screen and (max-width: $break-small) {
+				 font-size: 1.3rem;
+				 padding: 20px;
+			}
+			@media screen and (min-width: $break-large) {
+				font-size: 2rem;
+				padding: 20px;
+			}
         }
     }
-   
+    
+    
+   ion-footer { 
+	ion-toolbar {
+		text-align: center;
+		font-size: 1.5rem;
+		div {
+		background: transparentize(#34aff2 ,0.1) !important;
+		margin: 0px;
+		padding: 2px;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+   }
 }
 .rightans {
 	top: -50px;
