@@ -62,11 +62,6 @@ export class QuizPage {
     
   }
   
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RandomPage');
-    
-  }
-  
   go(concert) {
 	  this.answer = null;
 	  

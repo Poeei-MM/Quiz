@@ -10,14 +10,16 @@ import { Toast } from '@ionic-native/toast';
 })
 export class ListPage {
   users: any = [];
+  currentuser: any = [];
   myscore : any;
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite ) {
 	this.myscore = this.navParams.get('score');
-    alert(this.myscore);
+    //alert(this.myscore);
   }
   ionViewDidLoad() {
 	  this.getData();
+	  
   }
 
   getData() {
@@ -25,6 +27,15 @@ export class ListPage {
 		name: 'ionicdb.db',
 		location: 'default'
 	  }).then((db: SQLiteObject) => {
+		db.executeSql('INSERT INTO user VALUES(NULL,?,?,?)',[localStorage.getItem('name'),localStorage.getItem('phone'),this.myscore])
+        .then(res => {
+          console.log(res);
+          localStorage.clear();
+        })
+        .catch(e => {
+          console.log(e);
+        });
+        
 		db.executeSql('SELECT * FROM user ORDER BY rowid DESC', [])
 		.then(res => {
 		  this.users = [];
@@ -33,6 +44,8 @@ export class ListPage {
 		  }
 		})
 		.catch(e => console.log(e));
+		
+		
 	  })
 	}
 }
