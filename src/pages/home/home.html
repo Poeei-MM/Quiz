@@ -8,27 +8,17 @@
 </ion-header>
 
 <ion-content padding>
+	
    <form (ngSubmit)="saveData()">
 		<ion-item>
-		  <ion-label>Date</ion-label>
-		  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.date" name="date" required=""></ion-datetime>
+		  <ion-label>Name</ion-label>
+		  <ion-input type="text" placeholder="Name" [(ngModel)]="data.name" name="name" required="" ></ion-input>
 		</ion-item>
 		<ion-item>
-		  <ion-label>Type</ion-label>
-		  <ion-select [(ngModel)]="data.type" name="type" required="">
-			<ion-option value="Income">Income</ion-option>
-			<ion-option value="Expense">Expense</ion-option>
-		  </ion-select>
-		</ion-item>
-		<ion-item>
-		  <ion-label>Description</ion-label>
-		  <ion-input type="text" placeholder="Description" [(ngModel)]="data.description" name="description" required="" ></ion-input>
-		</ion-item>
-		<ion-item>
-		  <ion-label>Amount</ion-label>
-		  <ion-input type="number" placeholder="Amount" [(ngModel)]="data.amount" name="amount" required="" ></ion-input>
+		  <ion-label>Phone No</ion-label>
+		  <ion-input type="text" placeholder="Phone" [(ngModel)]="data.phone" name="phone" required="" ></ion-input>
 		</ion-item>
 		<button ion-button type="submit" block>Save Data</button>
 	</form>
-	<button ion-button secondary menuToggle>Toggle Menu</button>
+	
 </ion-content>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams , IonicPage } from 'ionic-angular';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+import { Toast } from '@ionic-native/toast';
 
 @IonicPage()
 @Component({
@@ -7,32 +9,30 @@ import { NavController, NavParams , IonicPage } from 'ionic-angular';
   templateUrl: 'list.html'
 })
 export class ListPage {
-  selectedItem: any;
-  icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
-
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+  users: any = [];
+  myscore : any;
+ 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite ) {
+	this.score = this.navParams.get('score');
+    alert(this.myscore);
+  }
+  ionViewDidLoad() {
+	  this.getData();
   }
 
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(ListPage, {
-      item: item
-    });
-  }
+  getData() {
+	  this.sqlite.create({
+		name: 'ionicdb.db',
+		location: 'default'
+	  }).then((db: SQLiteObject) => {
+		db.executeSql('SELECT * FROM user ORDER BY rowid DESC', [])
+		.then(res => {
+		  this.users = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.users.push({rowid:res.rows.item(i).rowid,name:res.rows.item(i).name,phone:res.rows.item(i).phone,score:res.rows.item(i).score})
+		  }
+		})
+		.catch(e => console.log(e));
+	  })
+	}
 }

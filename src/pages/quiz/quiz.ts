@@ -107,11 +107,13 @@ export class QuizPage {
 				  buttons: [{
 					  text: 'Ok',
 					  handler: () =>{
-						this.navCtrl.setRoot('QuizPage');
+					    var score = this.myscore;
+						this.navCtrl.push('ListPage', {score});
 					  }
 					}]
 				});
 				alert.present();
+				this.myscore = 0;
 			}
 	
 	}
