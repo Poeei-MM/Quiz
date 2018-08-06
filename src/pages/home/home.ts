@@ -57,4 +57,22 @@ export class HomePage {
   skip() {
 	this.navCtrl.push('QuizPage');
   }
+  
+  clearData() {
+	this.sqlite.create({
+      name: 'ionicdb.db',
+      location: 'default'
+    }).then((db: SQLiteObject) => {
+	db.executeSql('DROP TABLE user', [])
+		.then(res => console.log('Executed SQL'))
+		.catch(e => console.log(e));
+	}).catch(e => {
+      console.log(e);
+      this.toast.show(e, '5000', 'center').subscribe(
+        toast => {
+          console.log(toast);
+        }
+      );
+    });
+  }
 }

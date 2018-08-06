@@ -13,14 +13,14 @@
 	
    <form (ngSubmit)="saveData()">
 		<ion-item>
-		  <ion-label>Name</ion-label>
-		  <ion-input type="text" placeholder="Name" [(ngModel)]="data.name" name="name" required="" ></ion-input>
+		  <ion-label>Name	:</ion-label>
+		  <ion-input type="text" required placeholder="Name" [(ngModel)]="data.name" name="name"></ion-input>
 		</ion-item>
 		<ion-item>
-		  <ion-label>Phone No</ion-label>
-		  <ion-input type="text" placeholder="Phone" [(ngModel)]="data.phone" name="phone" required="" ></ion-input>
+		  <ion-label>Phone	:</ion-label>
+		  <ion-input type="text" required placeholder="Phone" [(ngModel)]="data.phone" name="phone"></ion-input>
 		</ion-item>
-		<button ion-button type="submit" block>Go To Quiz</button>
+		<button ion-button [disabled]="!data.name" type="submit" block>Go To Quiz</button>
 	</form>
-	
+	<button ion-button (click)="clearData()" block>Clear All Users</button>
 </ion-content>

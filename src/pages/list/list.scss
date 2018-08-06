@@ -1,4 +1,13 @@
 page-list {
+	.total {
+		border: 5px double #34aff2;
+		padding: 10px;
+		font-size: 2rem;
+		font-weight: bold;
+		margin: 10px;
+		border-radius: 10px;
+	}
+	
 	ion-card {
 		ion-card-content {
 			text-align: left;
