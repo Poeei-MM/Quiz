@@ -48,4 +48,8 @@ export class ListPage {
 		
 	  })
 	}
+	
+	quit() {
+		this.navCtrl.push('HomePage');
+	}
 }

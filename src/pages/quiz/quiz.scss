@@ -54,8 +54,16 @@ page-quiz {
 
     .the-header {
         position: relative;
-        height: 32vh;
-
+        
+		@media screen and (max-width: $break-small) {
+			height: 32vh;
+		}
+		@media screen and (min-width: $break-large) {
+			 height: 32vh;
+		}
+		@media screen and (min-width: 700px) {
+			 height: 50vh;
+		}
         .header-text {
             position: absolute;
             text-align: center;
@@ -77,9 +85,17 @@ page-quiz {
         }
 
         .background {
-            height: 30vh;
+
             position: relative;
-            
+            @media screen and (max-width: $break-small) {
+				height: 30vh;
+			}
+			@media screen and (min-width: $break-large) {
+				 height: 30vh;
+			}
+			@media screen and (min-width: 700px) {
+				 height: 48vh;
+			}
             
         }
 
@@ -117,7 +133,15 @@ page-quiz {
         padding-top: 40px !important;
         background: $content-color;
        
-        min-height: 50vh;
+        @media screen and (max-width: $break-small) {
+			min-height: 50vh;
+		}
+		@media screen and (min-width: $break-large) {
+			 min-height: 50vh;
+		}
+		@media screen and (min-width: 700px) {
+			 min-height: 70vh;
+		}
 		
         h2{
             color: white;
@@ -175,9 +199,7 @@ page-quiz {
 		@media screen and (min-width: $break-large) {
 			font-size: 1.7rem;
 		}
-		
-		
-			
+
 		button.bt3 {
             position: absolute;
             bottom: 0px;

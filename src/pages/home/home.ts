@@ -53,4 +53,8 @@ export class HomePage {
       );
     });
   }
+  
+  skip() {
+	this.navCtrl.push('QuizPage');
+  }
 }
