@@ -18,6 +18,7 @@ export class QuizPage {
   concertsrd : any[];
   concertans : any[];
   concertansrd : any[];
+  quizdata : any[] = [10];
   choiceanswer : any;
   answer : any;
   myscore : number = 0;
@@ -57,6 +58,18 @@ export class QuizPage {
 		}
 	    console.log(this.concertsrd);
 	    
+	    this.quizdata[0] = this.concertsrd[0];
+	    this.quizdata[1] = this.concertsrd[1];
+	    this.quizdata[2] = this.concertsrd[2];
+	    this.quizdata[3] = this.concertsrd[3];
+	    this.quizdata[4] = this.concertsrd[4];
+	    this.quizdata[5] = this.concertsrd[5];
+	    this.quizdata[6] = this.concertsrd[6];
+	    this.quizdata[7] = this.concertsrd[7];
+	    this.quizdata[8] = this.concertsrd[8];
+	    this.quizdata[9] = this.concertsrd[9];
+	    
+	    console.log(this.quizdata);
 	  this.slides.lockSwipes(true);
     });
     
