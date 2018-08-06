@@ -1,7 +1,4 @@
-page-quiz {
-	.score {
-		padding: 10px;
-	}
+page-quiz {     
 	
     $header-color: #fdf000;
     $content-color: #34aff2;
@@ -11,11 +8,37 @@ page-quiz {
 	
     .bar-buttons,
     .toolbar-title, button {
-        color: #fff !important;
+        color: #fff !important;   
     }
+	
+	.toolbar-title {
+		text-align: left;
+		
+		@media screen and (max-width: $break-small) {
+			 font-size: 1rem;
+		}
+		@media screen and (min-width: $break-large) {
+			 font-size: 1.3rem;
+			 .tablet { display: none }
+		}
+		position: relative;
+		animation: floatText 5s infinite alternate ease-in-out;
+	}
+	
+	@-webkit-keyframes floatText{
+	  from {
+		left: 0%;
+	  }
+
+	  to {
+		/* left: auto; */
+		left: 100%;
+	  }
+	}
 
     .toolbar-background {
         background: transparentize(#34aff2 ,0.1) !important;
+        
     }
 
     .scroll-content {
