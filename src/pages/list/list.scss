@@ -1,3 +1,23 @@
 page-list {
-
+	ion-card {
+		ion-card-content {
+			text-align: left;
+			
+			.card-title {
+				font-size: 2rem;
+				color: #34aff2;
+				font-weight: bold;
+			}
+		}
+		
+		ion-item {
+			ion-badge {
+				padding: 10px;
+				font-size: 2rem;
+				text-align: center;
+			}
+		}
+	}
+	
+	
 }

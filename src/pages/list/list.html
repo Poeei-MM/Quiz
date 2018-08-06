@@ -12,6 +12,7 @@
 	<ion-card *ngFor="let user of users">
 		<ion-card-content>
 		  <h2 class="card-title">
+			<ion-icon name='contact' item-start class="contact-icon"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			{{user.name}}
 		  </h2>
 		</ion-card-content>
@@ -20,22 +21,6 @@
 		  {{user.phone}}
 		  <ion-badge item-end>{{user.score}}</ion-badge>
 		</ion-item>
-	  </ion-card>
+	 </ion-card>
 	  
-   <ion-list> 
-    <ion-item-sliding *ngFor="let user of users; let i=index">
-      <ion-item nopadding>
-       
-        <h3 item-end>
-          {{user.name}}
-        </h3>
-         <p>
-          <span>{{user.phone}}</span><br>
-        </p>
-        <p>
-          <span>{{user.score}}</span><br>
-        </p>
-      </ion-item>
-    </ion-item-sliding>
-  </ion-list>
 </ion-content>

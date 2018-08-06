@@ -43,7 +43,8 @@ page-quiz {
 
         .header-text h3 {
             font-weight: bold;
-           
+            padding-top: 40px;
+            
             @media screen and (max-width: $break-small) {
 				 font-size: 1.6rem;
 			}
@@ -64,8 +65,7 @@ page-quiz {
             bottom: -30px;
             margin: 0 auto;
             left: 0;
-            right: 0;
-            background: $content-color;
+            background: $header-color;
             border: 3px solid $header-color;
             z-index: 2;
 			background-image: url('../assets/images/nld.jpg');
@@ -78,27 +78,11 @@ page-quiz {
             position: absolute;
             bottom: -30px;
             margin: 0 auto;
-            left: 0;
             right: 0;
-            background: $content-color;
+            background: $header-color;
             border: 3px solid $header-color;
             z-index: 2;
 			background-image: url('../assets/images/nld1.jpg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			
-            
-        }
-        button.bt3 {
-            position: absolute;
-            bottom: -30px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            background: $content-color;
-            border: 3px solid $header-color;
-            z-index: 2;
-			background-image: url('../assets/images/logo3.jpg');
 			background-size: contain;
 			background-repeat: no-repeat;
 			
@@ -162,11 +146,56 @@ page-quiz {
    ion-footer { 
 	ion-toolbar {
 		text-align: center;
-		font-size: 1.5rem;
+		@media screen and (max-width: $break-small) {
+			font-size: 1.1rem;
+		}
+		@media screen and (min-width: $break-large) {
+			font-size: 1.7rem;
+		}
+		
+		
+			
+		button.bt3 {
+            position: absolute;
+            bottom: 0px;
+			margin: 0 auto;
+            background: $header-color;
+            border: 3px solid $header-color;
+            z-index: 2;
+			background-image: url('../assets/images/logo3.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			@media screen and (max-width: $break-small) {
+				left: 0;
+			}
+			@media screen and (min-width: $break-large) {
+				left: 15px;
+				top: 0px;
+			}            
+        }
+        button.bt4 {
+            position: absolute;
+            bottom: 0px;
+            margin: 0 auto;
+            background: $header-color;
+            border: 3px solid $header-color;
+            z-index: 2;
+			background-image: url('../assets/images/logo3.jpg');
+			background-size: contain;
+			background-repeat: no-repeat;      
+			@media screen and (max-width: $break-small) {
+				right: 0px;
+			}
+			@media screen and (min-width: $break-large) {
+				right: 15px;
+				top: 0px;
+			}         
+        }
+        
 		div {
 		background: transparentize(#34aff2 ,0.1) !important;
 		margin: 0px;
-		padding: 2px;
+		padding: 4px;
 			span {
 				font-weight: bold;
 			}

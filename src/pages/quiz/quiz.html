@@ -16,27 +16,23 @@
           <div class="the-header">
 			
             <div class="header-text">
-			  
+			  <div>
+					<ion-row no-padding>
+					  <ion-col>
+						  <button class="bt1" ion-fab></button>
+						</ion-col>
+						<ion-col>
+							<button class="bt2" ion-fab></button>
+						</ion-col>
+					</ion-row>
+				</div>
               <h3>{{concert.question}}</h3>
             </div>
             
             <div class="background" [style.background]="concert.color">
 			
             </div>
-			<div>
-				<ion-row no-padding>
-				  <ion-col>
-					  <button class="bt1" ion-fab></button>
-					</ion-col>
-					<ion-col>
-						<button class="bt2" ion-fab></button>
-					</ion-col>
-					<ion-col>
-						<button class="bt3" ion-fab></button>
-					</ion-col>
-				</ion-row>
-			</div>
-
+			
           </div>
           <div class="the-content" padding>
             <div class="answers" padding>
@@ -66,7 +62,12 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <div><span>MCIA (Mandalay Computer Industry Association)</span><br>
+	
+    <div class="footer-toolbar">
+	<button class="bt3" ion-fab mini></button>
+    <span>MCIA (Mandalay Computer Industry Association)</span>
+    <button class="bt4" ion-fab mini></button>
+    <br>
               မွ လႉဒါန္းပါသည္။</div>
   </ion-toolbar>
 </ion-footer>

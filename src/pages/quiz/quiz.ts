@@ -89,7 +89,7 @@ export class QuizPage {
 		this.slides.lockSwipeToNext(false);
 			if(!this.indexslide) {
 				
-				this.slides.slideNext();
+				this.slides.slideNext(1000);
 				this.slides.lockSwipes(true);
 				
 			}
