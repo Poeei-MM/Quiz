@@ -74,7 +74,7 @@ page-quiz {
 
         .header-text h3 {
             font-weight: bold;
-            padding-top: 40px;
+            padding-top: 45px;
             
             @media screen and (max-width: $break-small) {
 				 font-size: 1.6rem;
@@ -101,7 +101,7 @@ page-quiz {
 
         button.bt1 {
             position: absolute;
-            bottom: -30px;
+            bottom: -20px;
             margin: 0 auto;
             left: 0;
             background: $header-color;
@@ -115,7 +115,7 @@ page-quiz {
         }
         button.bt2 {
             position: absolute;
-            bottom: -30px;
+            bottom: -20px;
             margin: 0 auto;
             right: 0;
             background: $header-color;
