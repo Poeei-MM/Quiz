@@ -47,13 +47,8 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$fab-size: 80px;
 
-@media screen and (max-width: 500px) {
-	 $fab-size: 50px;
-}
-@media screen and (min-width: 500px) {
-	 $fab-size: 100px;
-}
 
 // App Material Design Variables
 // --------------------------------------------------

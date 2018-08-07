@@ -101,7 +101,7 @@ page-quiz {
 
         button.bt1 {
             position: absolute;
-            bottom: -20px;
+            bottom: -40px;
             margin: 0 auto;
             left: 0;
             background: $header-color;
@@ -115,7 +115,7 @@ page-quiz {
         }
         button.bt2 {
             position: absolute;
-            bottom: -20px;
+            bottom: -40px;
             margin: 0 auto;
             right: 0;
             background: $header-color;
@@ -202,7 +202,7 @@ page-quiz {
 
 		button.bt3 {
             position: absolute;
-            bottom: 0px;
+            bottom: -10px;
 			margin: 0 auto;
             background: $header-color;
             border: 3px solid $header-color;
@@ -211,16 +211,16 @@ page-quiz {
 			background-size: contain;
 			background-repeat: no-repeat;
 			@media screen and (max-width: $break-small) {
-				left: 0;
+				left: -10px;
 			}
 			@media screen and (min-width: $break-large) {
-				left: 15px;
-				top: 0px;
+				left: 5px;
+				
 			}            
         }
         button.bt4 {
             position: absolute;
-            bottom: 0px;
+            bottom: -10px;
             margin: 0 auto;
             background: $header-color;
             border: 3px solid $header-color;
@@ -229,11 +229,11 @@ page-quiz {
 			background-size: contain;
 			background-repeat: no-repeat;      
 			@media screen and (max-width: $break-small) {
-				right: 0px;
+				right: -10px;
 			}
 			@media screen and (min-width: $break-large) {
-				right: 15px;
-				top: 0px;
+				right: 5px;
+				
 			}         
         }
         
