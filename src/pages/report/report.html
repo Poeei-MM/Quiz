@@ -10,10 +10,10 @@
 </ion-header>
 
 
-<ion-content no-padding>
+<ion-content padding>
 	<table datatable class="row-border hover">
 		<thead>
-		  <tr>
+		  <tr padding margin>
 			<th>ID</th>
 			<th>User</th>
 			<th>Ques1</th>
@@ -29,7 +29,7 @@
 		  </tr>
 		</thead>
 		<tbody>
-		  <tr *ngFor='let userdata of report' class="danger">
+		  <tr *ngFor='let userdata of report' padding margin>
 			<td>{{userdata.rowid}}</td>
 			<td>{{userdata.username}}</td>
 			<td>{{userdata.ques1}}</td>
