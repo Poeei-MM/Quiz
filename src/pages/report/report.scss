@@ -1,5 +1,5 @@
 page-report {
-	table {
+	/*table {
 		border: 3px double #000;
 		width: 100%;
         border-collapse: collapse;
@@ -21,16 +21,30 @@ page-report {
                 background: #eee;
 			}
 		}
-	}
+	}*/
 	
 	ion-grid
 	{
 	   overflow-x: scroll;
-
+	   border: 1px solid #000;
+	   box-shadow: 3px 1px 3px 3px #888888;
+	   border-radius: 5px;
+	   
+	   
+	   ion-row.grid-head {
+			background-color: #747677;
+			color: #fff;
+	   }
+	   
+	   ion-row {
+			display: table; 
+			border: 1px solid #000;
+		}
+		
+		ion-row:nth-of-type(odd).cont-rows {
+                background: #eff0f1;
+		}
 	}
 
-	ion-row
-	{
-		display: table;       
-	}
+	
 }
