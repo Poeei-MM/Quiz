@@ -11,9 +11,9 @@
 
 
 <ion-content padding>
-	<table datatable class="row-border hover">
+	<table datatable class="row-border hover" padding>
 		<thead>
-		  <tr padding margin>
+		  <tr padding>
 			<th>ID</th>
 			<th>User</th>
 			<th>Ques1</th>
@@ -29,7 +29,7 @@
 		  </tr>
 		</thead>
 		<tbody>
-		  <tr *ngFor='let userdata of report' padding margin>
+		  <tr *ngFor='let userdata of report' padding>
 			<td>{{userdata.rowid}}</td>
 			<td>{{userdata.username}}</td>
 			<td>{{userdata.ques1}}</td>
@@ -51,10 +51,10 @@
 	
 	<ion-grid class="contnr">
       <ion-row style="" class="grid-head">
-        <ion-col width-20>
+        <ion-col width-10>
           ID
         </ion-col>
-        <ion-col width-50>
+        <ion-col width-80>
           User
         </ion-col>
         <ion-col width-20 >
@@ -90,10 +90,10 @@
       </ion-row>
       <ion-row *ngFor="let userdata of report" style="background:#eff0f1" class="cont-rows">
 
-        <ion-col width-20>
+        <ion-col width-10>
           {{userdata.rowid}}
         </ion-col>
-        <ion-col width-50>
+        <ion-col width-80>
           {{userdata.username}}
         </ion-col>
         <ion-col width-20>
@@ -120,7 +120,7 @@
         <ion-col width-20>
           {{userdata.ques8}}
         </ion-col>
-        <ion-col width-40>
+        <ion-col width-20>
           {{userdata.ques9}}
         </ion-col>
         <ion-col width-20>
