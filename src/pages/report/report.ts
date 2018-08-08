@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import { Subject } from "rxjs/Subject";
+
 /**
  * Generated class for the ReportPage page.
  *
@@ -14,7 +14,7 @@ import { Subject } from "rxjs/Subject";
   selector: 'page-report',
   templateUrl: 'report.html',
 })
-export class ReportPage implements OnInit {
+export class ReportPage {
   report : any[];
   tques1 : any[];
   tques2 : any[];
@@ -26,9 +26,6 @@ export class ReportPage implements OnInit {
   tques8 : any[];
   tques9 : any[];
   tques10 : any[];
-    
-  dtOptions: DataTables.Settings = {};
-  
   
   constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite ) {
 	this.sqlite.create({
@@ -51,7 +48,7 @@ export class ReportPage implements OnInit {
 		  for(var i=0; i<res.rows.length; i++) {
 			this.tques1.push({tf:res.rows.item(i).ques1,count:res.rows.item(i).count1})
 		  }
-		  alert(JSON.stringify(this.tques1));
+		  //alert(JSON.stringify(this.tques1));
 		})
 		.catch(e => console.log(e));
 		
@@ -144,12 +141,9 @@ export class ReportPage implements OnInit {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
   }
-
-  ngOnInit():void {
-    this.dtOptions = {
-     pagingType: 'full_numbers',
-      pageLength: 12,
-      }
-  }
+  
+  quit() {
+		this.navCtrl.setRoot('HomePage');
+	}
 
 }

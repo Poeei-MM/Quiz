@@ -123,7 +123,7 @@ export class QuizPage {
 					  handler: () =>{
 					    var score = this.myscore;
 					    var queans = this.qa;
-						this.navCtrl.push('ListPage', {score, queans});
+						this.navCtrl.setRoot('ListPage', {score, queans});
 						console.log(this.qa);
 					  }
 					}]

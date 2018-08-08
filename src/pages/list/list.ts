@@ -24,7 +24,7 @@ export class ListPage {
 		else if (a.id > b.id) return 1;
 		else return 0;
 	  });
-	alert(JSON.stringify(this.queans));
+	//alert(JSON.stringify(this.queans));
   }
   ionViewDidLoad() {
 	  this.getData();
@@ -73,6 +73,6 @@ export class ListPage {
 	}
 	
 	report() {
-		this.navCtrl.setRoot('ReportPage');
+		this.navCtrl.push('ReportPage');
 	}
 }
