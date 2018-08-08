@@ -16,6 +16,17 @@ import { Subject } from "rxjs/Subject";
 })
 export class ReportPage implements OnInit {
   report : any[];
+  tques1 : any[];
+  tques2 : any[];
+  tques3 : any[];
+  tques4 : any[];
+  tques5 : any[];
+  tques6 : any[];
+  tques7 : any[];
+  tques8 : any[];
+  tques9 : any[];
+  tques10 : any[];
+    
   dtOptions: DataTables.Settings = {};
   
   
@@ -33,6 +44,99 @@ export class ReportPage implements OnInit {
 		  }
 		})
 		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques1,count(*) AS count1 FROM result GROUP BY ques1', [])
+		.then(res => {
+		  this.tques1 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques1.push({tf:res.rows.item(i).ques1,count:res.rows.item(i).count1})
+		  }
+		  alert(JSON.stringify(this.tques1));
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques2,count(*) AS count FROM result GROUP BY ques2', [])
+		.then(res => {
+		  this.tques2 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques2.push({tf:res.rows.item(i).ques2,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques3,count(*) AS count FROM result GROUP BY ques3', [])
+		.then(res => {
+		  this.tques3 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques3.push({tf:res.rows.item(i).ques3,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques4,count(*) AS count FROM result GROUP BY ques4', [])
+		.then(res => {
+		  this.tques4 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques4.push({tf:res.rows.item(i).ques4,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques5,count(*) AS count FROM result GROUP BY ques5', [])
+		.then(res => {
+		  this.tques5 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques5.push({tf:res.rows.item(i).ques5,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques6,count(*) AS count FROM result GROUP BY ques6', [])
+		.then(res => {
+		  this.tques6 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques6.push({tf:res.rows.item(i).ques6,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques7,count(*) AS count FROM result GROUP BY ques7', [])
+		.then(res => {
+		  this.tques7 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques7.push({tf:res.rows.item(i).ques7,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques8,count(*) AS count FROM result GROUP BY ques8', [])
+		.then(res => {
+		  this.tques8 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques8.push({tf:res.rows.item(i).ques8,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques9,count(*) AS count FROM result GROUP BY ques9', [])
+		.then(res => {
+		  this.tques9 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques9.push({tf:res.rows.item(i).ques9,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		db.executeSql('SELECT ques10,count(*) AS count FROM result GROUP BY ques10', [])
+		.then(res => {
+		  this.tques10 = [];
+		  for(var i=0; i<res.rows.length; i++) {
+			this.tques10.push({tf:res.rows.item(i).ques10,count:res.rows.item(i).count})
+		  }
+		})
+		.catch(e => console.log(e));
+		
+		
 	  })
   
   }
