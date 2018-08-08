@@ -90,10 +90,10 @@ export class QuizPage {
 			console.log(concert);
 			if(this.answer === concert.hint) {
 				this.myscore += 1;
-				this.qa.push({id: concert.id , qa: 1 });
+				this.qa.push({id: concert.id , qa: True });
 			}
 			else {
-				this.qa.push({id: concert.id , qa: 0 });
+				this.qa.push({id: concert.id , qa: False });
 			}
 			this.next(this.answer);
 		}

@@ -21,11 +21,13 @@ page-report {
 	
 	ion-grid
 	{
-	   overflow-x: scroll;
+	   overflow-x: auto;
+	   overflow-y: hidden;
 	}
 
 	ion-row
 	{
 		display: table;       
+		white-space: nowrap;
 	}
 }
