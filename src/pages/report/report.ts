@@ -16,17 +16,28 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 })
 export class ReportPage {
   report : any[];
-  tques1 : any[];
-  tques2 : any[];
-  tques3 : any[];
-  tques4 : any[];
-  tques5 : any[];
-  tques6 : any[];
-  tques7 : any[];
-  tques8 : any[];
-  tques9 : any[];
-  tques10 : any[];
   
+  tq1 : any;
+  fq1 : any;
+  tq2 : any;
+  fq2 : any;
+  tq3 : any;
+  fq3 : any;
+  tq4 : any;
+  fq4 : any;
+  tq5 : any;
+  fq5 : any;
+  tq6 : any;
+  fq6 : any;
+  tq7 : any;
+  fq7 : any;
+  tq8 : any;
+  fq8 : any;
+  tq9 : any;
+  fq9 : any;
+  tq10 : any;
+  fq10 : any;
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite ) {
 	this.sqlite.create({
 		name: 'ionicdb.db',
@@ -42,93 +53,163 @@ export class ReportPage {
 		})
 		.catch(e => console.log(e));
 		
-		db.executeSql('SELECT ques1,count(*) AS count1 FROM result GROUP BY ques1', [])
+		db.executeSql('SELECT ques1,count(*) AS count FROM result GROUP BY ques1', [])
 		.then(res => {
-		  this.tques1 = [];
+		  
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques1.push({tf:res.rows.item(i).ques1,count:res.rows.item(i).count1})
+			if(res.rows.item(i).ques1 === 'true') {
+				this.tq1 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq1 = res.rows.item(i).count;
+				
+			}
 		  }
-		  //alert(JSON.stringify(this.tques1));
+		  
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques2,count(*) AS count FROM result GROUP BY ques2', [])
 		.then(res => {
-		  this.tques2 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques2.push({tf:res.rows.item(i).ques2,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques2 === 'true') {
+				this.tq2 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq2 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques3,count(*) AS count FROM result GROUP BY ques3', [])
 		.then(res => {
-		  this.tques3 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques3.push({tf:res.rows.item(i).ques3,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques3 === 'true') {
+				this.tq3 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq3 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques4,count(*) AS count FROM result GROUP BY ques4', [])
 		.then(res => {
-		  this.tques4 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques4.push({tf:res.rows.item(i).ques4,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques4 === 'true') {
+				this.tq4 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq4 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques5,count(*) AS count FROM result GROUP BY ques5', [])
 		.then(res => {
-		  this.tques5 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques5.push({tf:res.rows.item(i).ques5,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques5 === 'true') {
+				this.tq5 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq5 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques6,count(*) AS count FROM result GROUP BY ques6', [])
 		.then(res => {
-		  this.tques6 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques6.push({tf:res.rows.item(i).ques6,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques6 === 'true') {
+				this.tq6 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq6 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques7,count(*) AS count FROM result GROUP BY ques7', [])
 		.then(res => {
-		  this.tques7 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques7.push({tf:res.rows.item(i).ques7,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques7 === 'true') {
+				this.tq7 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq7 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques8,count(*) AS count FROM result GROUP BY ques8', [])
 		.then(res => {
-		  this.tques8 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques8.push({tf:res.rows.item(i).ques8,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques8 === 'true') {
+				this.tq8 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq8 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques9,count(*) AS count FROM result GROUP BY ques9', [])
 		.then(res => {
-		  this.tques9 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques9.push({tf:res.rows.item(i).ques9,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques9 === 'true') {
+				this.tq9 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq9 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
 		
 		db.executeSql('SELECT ques10,count(*) AS count FROM result GROUP BY ques10', [])
 		.then(res => {
-		  this.tques10 = [];
 		  for(var i=0; i<res.rows.length; i++) {
-			this.tques10.push({tf:res.rows.item(i).ques10,count:res.rows.item(i).count})
+			
+			if(res.rows.item(i).ques10 === 'true') {
+				this.tq10 = res.rows.item(i).count;
+				
+			}
+			else {
+				this.fq10 = res.rows.item(i).count;
+				
+			}
 		  }
 		})
 		.catch(e => console.log(e));
