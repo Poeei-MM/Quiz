@@ -19,6 +19,8 @@ export class QuizPage {
   concertans : any[];
   concertansrd : any[];
   quizdata : any[] = [10];
+  qa : any[] = [];
+
   choiceanswer : any;
   answer : any;
   myscore : number = 0;
@@ -85,9 +87,13 @@ export class QuizPage {
 		}
 		else {
 			this.answer = this.choiceanswer;
-			console.log(this.answer);
+			console.log(concert);
 			if(this.answer === concert.hint) {
 				this.myscore += 1;
+				this.qa.push({id: concert.id , qa: T });
+			}
+			else {
+				this.qa.push({id: concert.id , qa: F });
 			}
 			this.next(this.answer);
 		}
@@ -116,7 +122,9 @@ export class QuizPage {
 					  text: 'Ok',
 					  handler: () =>{
 					    var score = this.myscore;
-						this.navCtrl.push('ListPage', {score});
+					    var queans = this.qa;
+						this.navCtrl.push('ListPage', {score, queans});
+						console.log(this.qa);
 					  }
 					}]
 				});

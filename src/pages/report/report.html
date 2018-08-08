@@ -1,0 +1,144 @@
+<ion-header>
+	
+  <ion-navbar>
+	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+	<table datatable class="row-border hover">
+		<thead>
+		  <tr>
+			<th>ID</th>
+			<th>User</th>
+			<th>Ques1</th>
+			<th>Ques2</th>
+			<th>Ques3</th>
+			<th>Ques4</th>
+			<th>Ques5</th>
+			<th>Ques6</th>
+			<th>Ques7</th>
+			<th>Ques8</th>
+			<th>Ques9</th>
+			<th>Ques10</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr *ngFor='let userdata of report'>
+			<td>{{userdata.rowid}}</td>
+			<td>{{userdata.username}}</td>
+			<td>{{userdata.ques1}}</td>
+			<td>{{userdata.ques2}}</td>
+			<td>{{userdata.ques3}}</td>
+			<td>{{userdata.ques4}}</td>
+			<td>{{userdata.ques5}}</td>
+			<td>{{userdata.ques6}}</td>
+			<td>{{userdata.ques7}}</td>
+			<td>{{userdata.ques8}}</td>
+			<td>{{userdata.ques9}}</td>
+			<td>{{userdata.ques10}}</td>
+		  </tr>
+		  <tr *ngIf="report?.length == 0">
+			  <td colspan="3" class="no-data-available">No data!</td>
+			</tr>
+		 </tbody>
+	</table>
+	
+	<ion-grid class="contnr">
+      <ion-row style="" class="grid-head">
+        <ion-col width-20>
+          ID
+        </ion-col>
+        <ion-col width-50>
+          User
+        </ion-col>
+        <ion-col width-20 >
+         Q1
+        </ion-col>
+        <ion-col width-20 >
+          Q2
+        </ion-col>
+        <ion-col  width-20>
+          Q3
+        </ion-col >
+        <ion-col  width-20>
+         Q4
+        </ion-col>
+        <ion-col  width-20>
+         Q5
+        </ion-col>
+        <ion-col  width-20>
+         Q6
+        </ion-col>
+        <ion-col width-20>
+          Q7
+        </ion-col>
+        <ion-col  width-20>
+          Q8
+        </ion-col >
+        <ion-col  width-20>
+         Q9
+        </ion-col>
+        <ion-col  width-20>
+         Q10
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let userdata of report" style="background:#eff0f1" class="cont-rows">
+
+        <ion-col width-20>
+          {{userdata.rowid}}
+        </ion-col>
+        <ion-col width-50>
+          {{userdata.username}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques1}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques2}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques3}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques4}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques5}}
+        </ion-col>
+        <ion-col width-40>
+          {{userdata.ques6}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques7}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques8}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques9}}
+        </ion-col>
+        <ion-col width-20>
+          {{userdata.ques10}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          Total
+        </ion-col>
+
+        <ion-col>
+          {{grossTotal}}
+        </ion-col>
+        <ion-col>
+          {{Nets}}
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+</ion-content>

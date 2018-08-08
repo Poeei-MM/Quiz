@@ -3,7 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    
     <ion-title>List</ion-title>
+    <ion-buttons start>	
+		<button ion-button (click)="report()">
+			Report
+		</button>
+	</ion-buttons>
     <ion-buttons end>	
 		<button ion-button (click)="quit()">
 			QUIT

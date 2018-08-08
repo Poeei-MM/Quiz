@@ -27,6 +27,10 @@ export class HomePage {
 		.then(res => console.log('Executed SQL'))
 		.catch(e => console.log(e));
 		this.navCtrl.push('QuizPage');
+	 db.executeSql('CREATE TABLE IF NOT EXISTS result(rowid INTEGER PRIMARY KEY, username TEXT, ques1 BIT, ques2 BIT, ques3 BIT, ques4 BIT, ques5 BIT, ques6 BIT, ques7 BIT, ques8 BIT, ques9 BIT, ques10 BIT)', [])
+		.then(res => console.log('Executed SQL'))
+		.catch(e => console.log(e));
+		this.navCtrl.push('QuizPage');
       //db.executeSql('INSERT INTO user VALUES(NULL,?,?,?)',[this.data.name,this.data.phone,this.data.score])
         //.then(res => {
          //console.log(res);

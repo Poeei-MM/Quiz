@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
 import { SQLite } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Toast } from '@ionic-native/toast';
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    DataTablesModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

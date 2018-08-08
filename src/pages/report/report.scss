@@ -1,0 +1,31 @@
+page-report {
+	table {
+		border: 1px solid #000;
+		
+		thead {
+			font-weight: bold;
+			padding: 10px;
+			tr, th {
+				border: 1px solid green;
+			}
+		}
+		
+		tbody {
+			padding: 10px;
+			
+			tr, td {
+				border: 1px solid red;
+			}
+		}
+	}
+	
+	ion-grid
+	{
+	   overflow-x: scroll;
+	}
+
+	ion-row
+	{
+		display: table;       
+	}
+}
