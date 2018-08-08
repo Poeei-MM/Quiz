@@ -29,7 +29,7 @@
 		  </tr>
 		</thead>
 		<tbody>
-		  <tr *ngFor='let userdata of report'>
+		  <tr *ngFor='let userdata of report' class="danger">
 			<td>{{userdata.rowid}}</td>
 			<td>{{userdata.username}}</td>
 			<td>{{userdata.ques1}}</td>
@@ -111,7 +111,7 @@
         <ion-col width-20>
           {{userdata.ques5}}
         </ion-col>
-        <ion-col width-40>
+        <ion-col width-20>
           {{userdata.ques6}}
         </ion-col>
         <ion-col width-20>
@@ -120,7 +120,7 @@
         <ion-col width-20>
           {{userdata.ques8}}
         </ion-col>
-        <ion-col width-20>
+        <ion-col width-40>
           {{userdata.ques9}}
         </ion-col>
         <ion-col width-20>

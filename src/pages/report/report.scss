@@ -1,6 +1,9 @@
 page-report {
 	table {
 		border: 1px solid #000;
+		padding: 10px;
+		width: 100%;
+        border-collapse: collapse;
 		
 		thead {
 			font-weight: bold;
@@ -16,18 +19,21 @@ page-report {
 			tr, td {
 				border: 1px solid red;
 			}
+			
+			 tr:nth-of-type(odd) {
+                background: #eee;
+			}
 		}
 	}
 	
 	ion-grid
 	{
-	   overflow-x: auto;
-	   overflow-y: hidden;
+	   overflow-x: scroll;
+
 	}
 
 	ion-row
 	{
 		display: table;       
-		white-space: nowrap;
 	}
 }
