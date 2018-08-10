@@ -82,4 +82,8 @@ export class HomePage {
       );
     });
   }
+  
+  report() {
+	this.navCtrl.push('ReportPage');
+  }
 }
