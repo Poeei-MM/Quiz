@@ -198,6 +198,8 @@ page-quiz {
 		}
 		@media screen and (min-width: $break-large) {
 			font-size: 1.7rem;
+			.tablet { display: none }
+
 		}
 
 		button.bt3 {
