@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, MenuController } from 'ionic-angular';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
 
@@ -11,9 +11,16 @@ import { Toast } from '@ionic-native/toast';
 export class HomePage {
   data = { name:"", phone:"", score: 0 };
   
-  constructor(public navCtrl: NavController, private sqlite: SQLite,
-    private toast: Toast) {
+  constructor(public navCtrl: NavController, 
+			  private sqlite: SQLite,
+			  private toast: Toast,
+			  public menuCtrl: MenuController) {
 
+  }
+
+  ionViewWillEnter() {
+
+	this.menuCtrl.swipeEnable( false );
   }
 
   saveData() {
@@ -85,5 +92,10 @@ export class HomePage {
   
   report() {
 	this.navCtrl.push('ReportPage');
+  }
+  
+  ionViewDidLeave() {
+
+	this.menuCtrl.swipeEnable( true );
   }
 }

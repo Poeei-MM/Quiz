@@ -1,8 +1,8 @@
 {
   "name": "quiz",
-  "app_id": "b524f0b7",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "angular",
+  "id": "b524f0b7"
 }
